@@ -1,0 +1,40 @@
+<div class="todo-form-container">
+    <div class="header">
+      <h2 class="page-title">Edit Todo</h2>
+      <mat-icon (click)="closeSidenav()">close</mat-icon>
+    </div>
+    <form [formGroup]="todoForm">
+      <mat-form-field class="todo-title" appearance="outline">
+        <mat-label>Todo Title</mat-label>
+        <input matInput type="text" formControlName="title" />
+        <button
+          *ngIf="todoForm.value.title"
+          matSuffix
+          mat-icon-button
+          aria-label="Clear"
+          (click)="resetTitle()"
+        >
+          <mat-icon>close</mat-icon>
+        </button>
+      </mat-form-field>
+  
+      <mat-form-field class="content" appearance="outline">
+        <mat-label>Todo Content</mat-label>
+        <textarea
+          matInput
+          placeholder="E.g. Meeting ..."
+          formControlName="contents"
+        ></textarea>
+      </mat-form-field>
+  
+      <button
+        mat-raised-button
+        class="save-button"
+        color="primary"
+        [disabled]="!todoForm.value.title || !todoForm.value.contents"
+        (click)="saveTodo()"
+      >
+        Save
+      </button>
+    </form>
+  </div>

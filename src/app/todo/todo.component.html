@@ -1,0 +1,14 @@
+<mat-sidenav-container>
+    <mat-sidenav #sidenav mode="over" position="end">
+      <app-todo-details-reactive
+        [todoId]="todoId"
+        [sidenavReference]="sidenav"
+      ></app-todo-details-reactive>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <header>
+        <span class="title" (click)="goToTodoList()">My Todo-List</span>
+      </header>
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>

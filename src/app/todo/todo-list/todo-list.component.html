@@ -1,0 +1,30 @@
+<div class="todo-list-container">
+    <div class="controls">
+      <button
+        class="add-button"
+        mat-mini-fab
+        color="primary"
+        aria-label="Add todo button"
+        title="Add Todo"
+        (click)="onAddTodo()"
+      >
+        <mat-icon>add</mat-icon>
+      </button>
+    </div>
+    <div *ngIf="todos.length > 0" class="todo-card-container">
+      <app-todo-card
+        class="todo-card"
+        *ngFor="let todo of todos"
+        [title]="todo.title"
+        [todoContents]="todo.contents"
+        (cardClicked)="onEditTodo(todo.id)"
+        (openFullScreenClicked)="onOpenTodoInFullscreen(todo.id)"
+        (deleteClicked)="onDeleteTodo(todo.id)"
+      ></app-todo-card>
+    </div>
+    <div *ngIf="todos.length === 0" class="no-contents-container">
+      <img src="./assets/page.png" alt="no data available" />
+      <h2>No todos available</h2>
+      <em>Add a todo-list to get started!</em>
+    </div>
+  </div>

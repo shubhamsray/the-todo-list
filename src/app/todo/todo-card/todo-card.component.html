@@ -1,0 +1,27 @@
+<div class="card-container">
+    <div class="title-container">
+      <h3 (click)="onCardClick()">{{ title }}</h3>
+      <button
+        mat-icon-button
+        [matMenuTriggerFor]="menu"
+        aria-label="Example icon-button with a menu"
+      >
+        <mat-icon>more_vert</mat-icon>
+      </button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item (click)="onOpenFullScreenClicked()">
+          <mat-icon>fullscreen</mat-icon>
+          <span>Open in fullscreen</span>
+        </button>
+        <button mat-menu-item (click)="onDeleteClick()">
+          <mat-icon>delete</mat-icon>
+          <span>Delete Todo</span>
+        </button>
+        <!-- <button mat-menu-item>
+          <mat-icon>keyboard_tab</mat-icon>
+          <span>Open in drawer</span>
+        </button> -->
+      </mat-menu>
+    </div>
+    <p (click)="onCardClick()">{{ todoContents }}</p>
+  </div>

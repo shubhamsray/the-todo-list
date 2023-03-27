@@ -1,0 +1,39 @@
+$header-height: 70px;
+
+.page-container {
+  width: 100%;
+  background-color: #eef1ff;
+}
+
+.todo-form-container {
+  width: 50%;
+  margin: 0 auto;
+  padding: 20px 0;
+  height: calc(100vh - $header-height);
+}
+
+.todo-form-container h2 {
+  font-weight: 600px;
+  color: slateblue;
+}
+
+.todo-title {
+  width: 100%;
+}
+
+.todo-title input {
+  font-family: "Roboto";
+  font-style: normal;
+  font-size: 16px;
+}
+
+.content {
+  width: 100%;
+}
+
+.content textarea {
+  height: 350px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-size: 16px;
+}

@@ -1,0 +1,16 @@
+header {
+    //  height: 70px;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    color: azure;
+    background-color: #6554c0;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+  }
+  
+  header .title {
+    cursor: pointer;
+  }

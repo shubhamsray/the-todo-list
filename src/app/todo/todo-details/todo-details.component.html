@@ -1,0 +1,37 @@
+<div class="page-container">
+    <div class="todo-form-container">
+      <h2 class="page-title">Add Todo</h2>
+      <mat-form-field class="todo-title" appearance="outline">
+        <mat-label>Todo Title</mat-label>
+        <input matInput type="text" [(ngModel)]="todo.title" />
+        <button
+          *ngIf="todo.title"
+          matSuffix
+          mat-icon-button
+          aria-label="Clear"
+          (click)="todo.title = ''"
+        >
+          <mat-icon>close</mat-icon>
+        </button>
+      </mat-form-field>
+  
+      <mat-form-field class="content" appearance="outline">
+        <mat-label>Todo Content</mat-label>
+        <textarea
+          matInput
+          placeholder="E.g. Meeting..."
+          [(ngModel)]="todo.contents"
+        ></textarea>
+      </mat-form-field>
+  
+      <button
+        mat-raised-button
+        color="primary"
+        [disabled]="!todo.title || !todo.contents"
+        (click)="saveTodo()"
+        (click)="todoSave(todo)"
+      >
+        Save
+      </button>
+    </div>
+  </div>

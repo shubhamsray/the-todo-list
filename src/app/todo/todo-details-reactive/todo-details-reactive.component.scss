@@ -1,0 +1,50 @@
+.todo-form-container {
+    width: 450px;
+    padding: 20px;
+    background-color: #eef1ff;
+    height: 100vh;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .header h2 {
+    font-weight: 600px;
+    color: slateblue;
+    margin-bottom: 0px;
+  }
+  
+  .header mat-icon {
+    cursor: pointer;
+  }
+  
+  .todo-title {
+    width: 100%;
+  }
+  
+  .todo-title input {
+    font-family: "Roboto";
+    font-style: normal;
+    font-size: 16px;
+  }
+  
+  .content {
+    width: 100%;
+  }
+  
+  .content textarea {
+    height: 63vh;
+    font-family: "Roboto";
+    font-style: normal;
+    font-size: 16px;
+  }
+  
+  .save-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+  }
